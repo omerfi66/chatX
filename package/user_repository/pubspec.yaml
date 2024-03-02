@@ -1,0 +1,27 @@
+name: chatx
+description: Dart package which manages the user.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+# Firebase
+  firebase_core: ^2.25.5
+  equatable: ^2.0.5
+  firebase_auth: ^4.17.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
