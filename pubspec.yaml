@@ -15,7 +15,7 @@ dependencies:
 # Firebase
   firebase_core: ^2.25.5
   firebase_auth: ^4.17.6
-  
+  firebase_storage: ^11.6.7
 
 # bloC
   flutter_bloc: ^8.1.4
@@ -26,6 +26,11 @@ dependencies:
     path: packages/user_repository/
   post_repository:
     path: packages/post_repository/
+  cupertino_icons: ^1.0.6
+  image_picker: ^1.0.7
+  image_cropper: ^5.0.1
+  intl: ^0.19.0
+
 
 dev_dependencies:
   flutter_test:

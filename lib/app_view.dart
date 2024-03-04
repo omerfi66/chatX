@@ -1,7 +1,10 @@
+import 'package:chatx/blocs/get_post_bloc/get_post_bloc.dart';
+import 'package:chatx/blocs/update_user_info_bloc/update_user_info_bloc.dart';
 import 'package:chatx/screens/authentication/welcome_screen.dart';
 import 'package:chatx/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:post_repository/post_repository.dart';
 
 import 'blocs/authentication_bloc/authentication_bloc.dart';
 import 'blocs/my_user_bloc/my_user_bloc.dart';
@@ -37,11 +40,11 @@ class MyAppView extends StatelessWidget {
                     userRepository:
                         context.read<AuthenticationBloc>().userRepository),
               ),
-              // BlocProvider(
-              //   create: (context) => UpdateUserInfoBloc(
-              //       userRepository:
-              //           context.read<AuthenticationBloc>().userRepository),
-              // ),
+              BlocProvider(
+                create: (context) => UpdateUserInfoBloc(
+                    userRepository:
+                        context.read<AuthenticationBloc>().userRepository),
+              ),
               BlocProvider(
                 create: (context) => MyUserBloc(
                     myUserRepository:
@@ -50,11 +53,11 @@ class MyAppView extends StatelessWidget {
                       myUserId:
                           context.read<AuthenticationBloc>().state.user!.uid)),
               ),
-              // BlocProvider(
-              //     create: (context) =>
-              //         GetPostBloc(postRepository: FirebasePostRepository())
-              //           ..add(GetPosts()),
-              //           )
+              BlocProvider(
+                create: (context) =>
+                    GetPostBloc(postRepository: FirebasePostRepository())
+                      ..add(GetPosts()),
+              )
             ],
             child: const HomeScreen(),
           );
