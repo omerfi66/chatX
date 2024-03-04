@@ -1,5 +1,5 @@
-name: chatx
-description: Dart package which manages the post.
+name: user_repository
+description: Dart package which manages the user.
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -14,6 +14,11 @@ dependencies:
 
 # Firebase
   firebase_core: ^2.25.5
+  equatable: ^2.0.5
+  firebase_auth: ^4.17.6
+  cloud_firestore: ^4.15.6
+
+
 
 dev_dependencies:
   flutter_test:

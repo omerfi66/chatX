@@ -14,7 +14,18 @@ dependencies:
 
 # Firebase
   firebase_core: ^2.25.5
+  firebase_auth: ^4.17.6
+  
+
+# bloC
+  flutter_bloc: ^8.1.4
   equatable: ^2.0.5
+
+    # Custom Repository
+  user_repository:
+    path: packages/user_repository/
+  post_repository:
+    path: packages/post_repository/
 
 dev_dependencies:
   flutter_test:
